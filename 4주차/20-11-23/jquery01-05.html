@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery 1-5</title>
+    <script src="./jquery-3.5.1.js"></script>
+    <script src="./jquery.color-2.1.2.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#div01 > .flip").on("click", function(){
+                for (var i = 0; i < 10; i++){
+                    $("#div01 > .panel").slideDown(5000);
+                    $("#div01 > .panel").slideUp(5000);
+                }
+                
+            });
+            $("#btnStop").on("click", function(){
+                $("#div01 > .panel").stop();
+            });
+        });
+    </script>
+
+    <style>
+        .flip, .panel {
+            padding: 5px;
+            font-size: 18px;
+            text-align: center;
+            background-color: darkgray;
+            color: white;
+            border: 1px solid black;
+        }
+
+        #div01 > .panel {
+            padding: 50px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="div01">
+        <button id="btnStop">클릭 시 슬라이드 다운 멈춤</button><br><br>
+
+        <div class="flip">클릭 시 슬라이드 다운</div>
+        <div class="panel">클릭 시 화면에 출력되는 div</div>
+    </div>
+</body>
+</html>
