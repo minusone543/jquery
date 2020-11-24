@@ -3,21 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>jquery 1-5</title>
+    <title>jqeury 1-5</title>
+
     <script src="./jquery-3.5.1.js"></script>
-    <script src="./jquery.color-2.1.2.min.js"></script>
+    <script src="./jquery.color-2.1.2.js"></script>
 
     <script>
-        $(document).ready(function(){
-            $("#div01 > .flip").on("click", function(){
-                for (var i = 0; i < 10; i++){
-                    $("#div01 > .panel").slideDown(5000);
-                    $("#div01 > .panel").slideUp(5000);
-                }
-                
+        $(document).ready(function() {
+            $("#div01 > .flip").on("click", function() {
+                $("#div01 > .panel").slideDown(5000);
+                $("#div01 > .panel").slideUp(5000);
             });
-            $("#btnStop").on("click", function(){
-                $("#div01 > .panel").stop();
+
+            $("#btnStop").on("click", function() {
+                $("#div01 > .panel").stop(true, true);
+            });
+
+            // 메서드 체이닝
+            $("#btn").on("click", function() {
+                $("#p1").css("color", "red").slideUp(2000).slideDown(2000).fadeOut(2000).fadeIn(2000);
+
+
+                // jquery는 구문이 엄격하지 않기 때문에 아래와 같이 사용해도 상관없음
+                // $("#p1").css("color", "red")
+                    // .slideUp(2000)
+                    // .slideDown(2000)
+                    // .fadeOut(2000)
+                    // .fadeIn(2000);
+                // $("#p1").css("color", "red");
+                // $("#p1").slideUp(2000);
+                // $("#p1").slideDown(2000);
+                // $("#p1").fadeOut(2000);
+                // $("#p1").fadeIn(2000);
             });
         });
     </script>
@@ -44,6 +61,13 @@
 
         <div class="flip">클릭 시 슬라이드 다운</div>
         <div class="panel">클릭 시 화면에 출력되는 div</div>
+    </div>
+
+    <br><hr><br>
+
+    <div id="div02">
+        <p id="p1">버튼 클릭 시 이벤트 동작</p>
+        <button type="button" id="btn">클릭해주세요</button>
     </div>
 </body>
 </html>
