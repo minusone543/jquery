@@ -12,6 +12,22 @@
                 "color": "red",
                 "border": "2px solid red"
             });
+            // $("#div02 span").parents().css({
+            //     "border": "2px solid red",
+            //     "color": "red"
+            // });
+            $("#div03 span").parents("ul").css({
+                "border": "2px solid red",
+                "color": "red"
+            });
+            
+            // var tag = $("#div03 span").parents("ul");
+            // tag.css("color", "red");
+
+            $("#div04 span").parentsUntil("div").css({
+                "border": "2px solid red",
+                "color": "red"
+            });
         });
     </script>
     <style>
@@ -27,7 +43,7 @@
 <body>
     <div id="div01">
         <h3>parent() 사용</h3>
-        <div class="ancestors">
+        <div class="ancestors">div (조상 태그 3단계)
             <div>div (조상 태그 2단계)
                 <ul> ul (조상 태그 1단계)
                     <li>li (부모 태그)
@@ -41,6 +57,49 @@
                 </p>
             </div>
         </div>
+    </div>
+
+    <br><hr><br>
+    
+    <div id="div02">
+        <h3>parents() 사용</h3>
+        <div class="ancestors">div (조상 태그 3단계)
+            <div>div (조상 태그 2단계)
+                <ul>ul (조상 태그 1단계)
+                    <li>li (부모 태그)
+                        <span>지정한 span태그3</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <br><hr><br>
+
+    <div id="div03">div (조상 태그 3단계)
+        <h3>parents() 필터 사용</h3>
+        <div class="ancestors">div (조상 태그 3단계)
+            <div>div (조상 태그 2단계)
+                <ul>ul (조상 태그 1단계)
+                    <li>li (부모 태그)
+                        <span>지정한 span 태그4</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    <div id="div04">
+        <h3></h3>
+        <h3>parentsUntil() 필터 사용</h3>
+        <div class="ancestors">div (조상 태그 3단계)
+            <div>div (조상 태그 2단계)
+                <ul>ul (조상 태그 1단계)
+                    <li>li (부모 태그)
+                        <span>지정한 span 태그4</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
     </div>
 </body>
 </html>

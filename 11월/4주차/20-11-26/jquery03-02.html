@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery 3-2</title>
+    <script src="../jquery/jquery-3.5.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#div01 > div").children().css({
+                "color": "red",
+                "border" : "2px solid red"
+            });
+            $("#div02 > div").children("p.first").css({
+                "color": "red",
+                "border" : "2px solid red"
+            });
+            $("#div03 > div").find("span").css({
+                "color": "red",
+                "border" : "2px solid red"
+            });
+        });
+    </script>
+    <style>
+        .desc * {
+            display: block;
+            border: 2px solid lightgray;
+            color: lightgray;
+            padding: 5px;
+            margin: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div id="div01">
+        <div class="desc">지정한 div 태그
+            <p>p (직계 자손)
+                <span>span (후손 1단계)</span>
+            </p>
+            <p>p (직계 자손)
+                <span>span (후손 1단계)</span>
+            </p>
+
+        </div>
+    </div>
+
+    <div id="div02">
+        <div class="desc">지정한 div 태그
+            <p class="first">p (직계 자손)
+                <span>span (후손 1단계)</span>
+            </p>
+            <p class="second">p (직계 자손)
+                <span>span (후손 1단계)</span>
+            </p>
+            <h4 class="first">h4 (직계 자손)</h4>
+        </div>
+    </div>
+
+    <div id="div03">
+        <div class="desc">지정한 div 태그
+            <p>p (직계 자손)
+                <span>span (후손 1단계)</span>
+            </p>
+            <p>p (직계 자손)
+                <span>span (후손 1단계)</span>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery 3-3</title>
+    <script src="../jquery/jquery-3.5.1.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#div01 h2").siblings().css({
+                "color":"red",
+                "border" : "2px solid red"
+            });
+        });
+        $(document).ready(function(){
+            $("#div02 h2").next().css({
+                "color":"red",
+                "border" : "2px solid red"
+            });
+        });
+        $(document).ready(function(){
+            $("#div03 h2").nextAll().css({
+                "color":"red",
+                "border" : "2px solid red"
+            });
+        });
+        $(document).ready(function(){
+            $("#div04 h2").nextUntil().css({
+                "color":"red",
+                "border" : "2px solid red"
+            });
+        });
+        $(document).ready(function(){
+            $("#div05 h2").prev().css({
+                "color":"red",
+                "border" : "2px solid red"
+            });
+        });
+        $(document).ready(function(){
+            $("#div06 h2").prevAll().css({
+                "color":"red",
+                "border" : "2px solid red"
+            });
+        });
+        $(document).ready(function(){
+            $("#div07 h2").prevUntil().css({
+                "color":"red",
+                "border" : "2px solid red"
+            });
+        });
+
+    </script>
+    <style>
+        .siblings * {
+            display: block;
+            border: 2px solid lightgray;
+            color: lightgray;
+            padding: 5px;
+            margin: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div id="div01">
+        <h3>siblings()사용</h3>
+        <div class="siblings">
+            <div>
+                <p>prev 2번째 형제 태그 p</p>
+                <span>prev 형제 태그 span</span>
+                <h2>지정한 태그 h2</h2>
+                <h3>next 형제 태그 h3</h3>
+                <p>next 2번째 형제 태그 p</p>
+            </div>
+        </div>
+    </div>
+
+    <br><hr><br>
+    
+    <div id="div02">
+        <h3>next()사용</h3>
+        <div class="next">
+            <div>
+                <p>prev 2번째 형제 태그 p</p>
+                <span>prev 형제 태그 span</span>
+                <h2>지정한 태그 h2</h2>
+                <h3>next 형제 태그 h3</h3>
+                <p>next 2번째 형제 태그 p</p>
+            </div>
+        </div>
+    </div>
+
+    <br><hr><br>
+
+    <div id="div03">
+        <h3>nextAll()사용</h3>
+        <div class="nextAll">
+            <div>
+                <p>prev 2번째 형제 태그 p</p>
+                <span>prev 형제 태그 span</span>
+                <h2>지정한 태그 h2</h2>
+                <h3>next 형제 태그 h3</h3>
+                <p>next 2번째 형제 태그 p</p>
+            </div>
+        </div>
+    </div>
+
+    <br><hr><br>
+
+    <div id="div04">
+        <h3>nextUntil()사용</h3>
+        <div class="nextUntil">
+            <div>
+                <p>prev 2번째 형제 태그 p</p>
+                <span>prev 형제 태그 span</span>
+                <h2>지정한 태그 h2</h2>
+                <h3>next 형제 태그 h3</h3>
+                <p>next 2번째 형제 태그 p</p>
+            </div>
+        </div>
+    </div>
+
+    <br><hr><br>
+
+    <div id="div05">
+        <h3>prev()사용</h3>
+        <div class="prev">
+            <div>
+                <p>prev 2번째 형제 태그 p</p>
+                <span>prev 형제 태그 span</span>
+                <h2>지정한 태그 h2</h2>
+                <h3>next 형제 태그 h3</h3>
+                <p>next 2번째 형제 태그 p</p>
+            </div>
+        </div>
+    </div>
+
+    <br><hr><br>
+
+    <div id="div06">
+        <h3>prevAll()사용</h3>
+        <div class="prevAll">
+            <div>
+                <p>prev 2번째 형제 태그 p</p>
+                <span>prev 형제 태그 span</span>
+                <h2>지정한 태그 h2</h2>
+                <h3>next 형제 태그 h3</h3>
+                <p>next 2번째 형제 태그 p</p>
+            </div>
+        </div>
+    </div>
+
+    <br><hr><br>
+
+    <div id="div07">
+        <h3>prevUntil()사용</h3>
+        <div class="prevUntil">
+            <div>
+                <p>prev 2번째 형제 태그 p</p>
+                <span>prev 형제 태그 span</span>
+                <h2>지정한 태그 h2</h2>
+                <h3>next 형제 태그 h3</h3>
+                <p>next 2번째 형제 태그 p</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
